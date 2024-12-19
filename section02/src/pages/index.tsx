@@ -12,7 +12,6 @@ import fetchRandomBooks from '@/lib/fetch-random-books';
 // 사전 렌더링하는 과정에서 딱 한번만 실행되므로 오직 서버측에서만 실행되는 함수
 
 // #2. SSG - 정적 경로 (getStaticPros 함수)
-
 export const getStaticProps = async () => {
   // ver1. 직렬구조 (한 호출이 끝나야 다음 호출을 진행)
   // const allBooks = await fetchBooks();
@@ -28,6 +27,8 @@ export const getStaticProps = async () => {
 
   return {
     props: { allBooks, recoBooks },
+    // #3. ISG
+    // revalidate: 3,
   };
 };
 export default function Home({
