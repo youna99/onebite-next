@@ -41,7 +41,7 @@ export default function Home({
       {/* 탭 타이틀 */}
       <Head>
         <title>한입북스</title>
-        <meta property="og:image" content="/thumnail.png" />
+        <meta property="og:image" content="/thumbnail.png" />
         <meta property="og:title" content="한입북스" />
         <meta
           property="og:description"
